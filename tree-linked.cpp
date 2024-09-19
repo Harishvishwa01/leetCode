@@ -26,3 +26,7 @@ public:
         cur = root;
     }
 };
+
+int main(){
+    
+}
