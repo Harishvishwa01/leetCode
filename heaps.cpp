@@ -52,6 +52,16 @@ int pop(){
     heapDown(0);
     return maxi;
 }
+
+vector<int> heapSort(){
+    int n = heap.size();
+    vector<int> ans(n);
+
+    for(int i = 0; i < n; i++){
+        ans[i] = heap.front();
+        pop();
+    }
+}
 int main(){
     int n;
     cin>>n;
@@ -74,5 +84,11 @@ int main(){
    for(int i = 0; i < num; i++){
     x =  pop();
    }
-   cout<<x;
+   cout<<x<<endl;
+
+   vector<int> ans = heapSort();
+    cout<<"sorted arr :";
+   for(auto it : ans){
+    cout<<it<<" ";
+   }
 }

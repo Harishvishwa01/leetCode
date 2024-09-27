@@ -44,21 +44,12 @@ public:
                     q.push({node->left, cur_id * 2 + 1});
                 }
 
-                // Enqueue the right child of the
-                // current node with its position
                 if (node->right) {
                     q.push({node->right, cur_id * 2 + 2});
                 }
             }
-
-            // Update the maximum width by calculating
-            // the difference between the first and last
-            // positions, and adding 1
             ans = max(ans, last - first + 1);
         }
-
-        // Return the maximum
-        // width of the binary tree
         return ans;
     }
 };
