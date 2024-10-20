@@ -17,10 +17,7 @@ public:
                     continue;
                 }
                 else{
-                    if(i == 0 && j == 0 && Grid[i][j] != 1){
-                        temp[j] = 1;
-                        continue;
-                    }
+                if(i == 0 && j == 0 && Grid[i][j] != 1){ temp[j] = 1;continue;}
                     int up = i > 0 ? dp[j] : 0;
                     int left = j > 0 ? temp[j -1] : 0;
 
