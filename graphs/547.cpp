@@ -3,6 +3,14 @@ using namespace std;
 
 class Solution {
 public:
+    void dfs(vector<int> adj[],vector<int>& vis,int start){
+    vis[start] = 1;
+    for(auto it : adj[start]){
+        if(!vis[it]){
+            dfs(adj,vis,it);
+        }
+    }
+}
     void bfs(vector<int> adj[],vector<int>& vis,int start){
         queue<int> q;
         q.push(start);
