@@ -1,5 +1,6 @@
  #include<bits/stdc++.h>
 using namespace std;
+//bfs
  bool defect(int src,vector<int>& vis,vector<int> adj[]){
         vis[src] = 1;
         queue<pair<int,int>> q;
@@ -20,6 +21,18 @@ using namespace std;
         }
         return false;
     }
+    bool dfs(int node,int parent,vector<int>& vis,vector<int> adj[]){
+       vis[node] = 1;
+       for(auto it : adj[node]){
+           if(!vis[it]){
+               if(dfs(it,node,vis,adj) == true) return true;
+           }
+           else if(parent != it){
+               return true;
+           }
+       }
+       return false;
+   }
     bool isCycle(vector<vector<int>>& adjls) {
         
          int n = adjls.size();
