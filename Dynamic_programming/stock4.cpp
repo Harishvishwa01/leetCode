@@ -1,8 +1,3 @@
-/*
-   Author : Harish Vishwa 
-   Date : 14 / 11 / 24
-*/
-
 #include<bits/stdc++.h>
 using namespace std;
 class Solution {
